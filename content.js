@@ -1,6 +1,2 @@
-const provider = new ethers.providers.InfuraProvider("homestead", "a71874bbcb6a450398f24a7bbd436eda");
-
-chrome.storage.sync.get("color", ({ color }) => {
-  document.body.style.backgroundColor = color;
-});
-alert('hello');
+var provider = new ethers.providers.InfuraProvider("homestead", "a71874bbcb6a450398f24a7bbd436eda");
+provider.lookupAddress("0x06e6f7D896696167B2dA9281EbAF8a14580fbFCc").then(resolved => alert("resolved: " + resolved));
